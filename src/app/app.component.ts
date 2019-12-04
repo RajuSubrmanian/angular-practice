@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SidebarComponent} from './SidebarComponent';
 
 @Component({
   selector: 'my-app',
