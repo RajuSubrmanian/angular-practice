@@ -22,4 +22,7 @@ export class AppComponent  {
   getIncreaseCount(count) {
     this.dataService.getIncreaseCount();
   }
+
+  status = true;
+  users =[{id:"1",name:"raju"},{id:2,name:"kavi"}];
 }
