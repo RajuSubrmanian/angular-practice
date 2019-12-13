@@ -34,7 +34,9 @@
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
+  <div>count:{{count}}</div>
   <div class="form-group">
+     <button type="submit" (click)= "getIncreaseCount()" class="btn btn-primary">count</button>
     <button type="submit" (click)= "submitUser()" class="btn btn-primary">Submit</button>
   </div>
 </form>
