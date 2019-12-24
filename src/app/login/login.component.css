@@ -1,0 +1,25 @@
+.login-container {
+  margin-top: 25%;
+  width: 50%;
+}
+
+.test {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  background: red;
+}
+
+#two {
+  background: green;
+  position: absolute;
+  top:20px;
+  left: 20px;  
+}
+
+.parent {
+ border: 2px dotted black;
+ display: inline-block;
+ position: relative;
+ width: 50%;
+}
