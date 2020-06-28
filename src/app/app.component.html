@@ -1,24 +1,11 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-<div class="container-fluid" *ngShow>
-  <app-sidebar></app-sidebar>
-  <hello name="{{ name }}"></hello>
+<div class="container-fluid">
 <form>
   <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" [(ngModel)]="email">
-    <div>{{email}}</div>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
   </div>
   <div class="form-group" *ngIf = "status">
     <label for="exampleFormControlSelect1">User List</label>
@@ -27,25 +14,7 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <div>count:{{count}}</div>
-  <div class="form-group">
-     <button type="submit" (click)= "dataService.getIncreaseCount()" class="btn btn-primary">count</button>
     <button type="submit" (click)= "submitUser()" class="btn btn-primary">Submit</button>
   </div>
 </form>
 </div>
-
-<app-login ></app-login>

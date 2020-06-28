@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {DataService} from './service/data.service'
+import { DataService } from './service/data.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -15,12 +16,7 @@ export class AppComponent  {
   }
 
   constructor(private dataService : DataService) {
-    this.count = dataService.count;
-  }
-  
-
-  getIncreaseCount(count) {
-    this.dataService.getIncreaseCount();
+   dataService.getUser();
   }
 
   status = true;

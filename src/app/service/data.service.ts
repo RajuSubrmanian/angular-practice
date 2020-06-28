@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn : 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private httpClient : HttpClient) {
+    
+  }
 
-  count =0;
-
-  getIncreaseCount(count) {
-    this.count++;
+  getUser() {
+    return this.httpClient.get("https://reqres.in/api/users/2");
   }
 
 }
