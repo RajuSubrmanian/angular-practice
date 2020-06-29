@@ -1,15 +1,17 @@
-<div class="container login-container">
-    <h4>Provide your email address to access sizing tool</h4>
-    <div class="well" style="background:white;">
-      <input type="text" id="email" placeholder="Enter your email"/>
-      <button type="button" class="btn-primary" id="btnSubmit"> Submit</button>
-    </div>
-</div>
-
-<!-- css position pratice-->
-<div class="parent" *ngHide>
-  <div class="test">test1</div>
-  <div class="test" id="two">test2</div>
-  <div class="test">test3</div>
-  <div class="test">test4</div>
+<div class="well login-form">
+<form [formGroup]="loginForm">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" formControlName="email" placeholder="name@example.com">
+  </div>
+  <div class="form-group" *ngIf = "status">
+    <label for="exampleFormControlSelect1">User List</label>
+    <select class="form-control" id="exampleFormControlSelect2">
+      <option *ngFor='let user of users' value=user.name>{{user.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button type="submit" (click)= "submitUser()" class="btn btn-primary">Submit</button>
+  </div>
+</form>
 </div>
