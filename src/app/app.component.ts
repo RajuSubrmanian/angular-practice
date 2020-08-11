@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent  {
   name = 'Angular';
   email = 'test@abc.com';
-  count;
+  count;sics
 
   constructor(private dataService : DataService) {
 }
